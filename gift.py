@@ -7,7 +7,7 @@ import json
 
 
 ROOT = Path(__file__).resolve().parent
-ASSET_VERSION = "mobile-story-flip-1"
+ASSET_VERSION = "mobile-centered-book-zoom-1"
 BACKSOUND_FILE = "Taylor Swift - Daylight.mp3"
 
 CONFIG = {
@@ -41,8 +41,8 @@ CONFIG = {
         "title": "Maaf hadiahnya cuma sweater inii ajaaa",
         "lead": "Belum bisa yang mewah-mewah eheheheehe, tapi ini aku pilih sambil mikirin kamu.",
         "note": (
-            "Kalau nanti kamu pakai, semoga rasanya hangat. Bukan cuma karena sweater-nya, "
-            "tapi karena ada aku yang diam-diam pengin jagain kamu dari jauh."
+            "Semoga hadiahh ini bisa bermanfaat jugaa buat kamu yaa "
+            "Sekali lgii aku maaf bangett belum bisa kasih apapunn yang lebii baguss."
         ),
         "small": (
             "Maaf ya sayangg aku jugaa lagi nabung sama ngumpulin buat kebutuhan yang lainn, "
