@@ -7,37 +7,37 @@ import json
 
 
 ROOT = Path(__file__).resolve().parent
-ASSET_VERSION = "vercel-love-icon-1"
+ASSET_VERSION = "personal-vercel-1"
 BACKSOUND_FILE = "Taylor Swift - Daylight.mp3"
 
 CONFIG = {
-    "toName": "Kamu",
-    "fromName": "Seseorang",
+    "toName": "Hanny Purwita Sari",
+    "fromName": "Aku",
     "mainMessages": [
-        "Hai, kamu...",
-        "Ini pesan kecil, ngirim peluk hangat dari jauh.",
+        "Hai, sayang...",
+        "Ini aku, ngirim peluk hangat dari jauh.",
         "Kamu bikin hari-hariku yang biasa jadi terasa lebih lembut, lebih terang, dan lebih punya arah.",
-        "Aku bangga sama kamu, selalu ngertiin dan sabar dengan banyak hal.",
-        "Semoga halaman kecil ini bisa bikin kamu senyum sebentar.",
+        "Aku bangga sama kamu, selalu ngertiin aku dan ngasih waktu buat sendiri",
+        "Aih gatau lah aku apalgi yeah",
     ],
     "aboutHer": {
-        "eyebrow": "tentang dia",
-        "title": "Seseorang yang Spesial",
-        "subtitle": "Orang yang selalu punya tempat sendiri di hati.",
+        "eyebrow": "tentang hanny menurut akuu",
+        "title": "Hanny Purwita Sari",
+        "subtitle": "Cewek paling aku sayang, yang selalu punya tempat sendiri di hatiku.",
         "facts": [
-            ("Nama", "Dirahasiakan"),
-            ("Hari Spesial", "Dirahasiakan"),
-            ("Hal kecil", "Senyumnya yang sederhana"),
-            ("Paling disuka", "Caranya bikin hari terasa lebih hangat"),
+            ("Nama", "Hanny Purwita Sari"),
+            ("Tanggal Lahir", "24 Oktober 2007"),
+            ("Hal kecil", "Lupaan Ahahahaha"),
+            ("Paling aku suka", "Kalo dikasii pap si, jadi beri aku pap banyak banyak"),
         ],
-        "storyTitle": "Wish kecil dari aku",
+        "storyTitle": "Wish dan kelebihan Hanny dari Aku",
         "story": (
-            "Semoga ke depannya kamu selalu dijaga hal-hal baik, makin kuat, makin bahagia, "
-            "dan tetap jadi versi diri kamu yang paling tulus."
+            "hanny orangnyaa malesan, jadi buat kedepannya dikurangin yeah males sama magernya, "
+            "dan kelebihannya mungkin dari hanny sendiri yang ngelakuin aku lebih baik,daripada sebelumnya. "
         ),
     },
     "result": {
-        "label": "catatan kecil",
+        "label": "catatan kecil buat sayang",
         "title": "Maaf hadiahnya cuma sweater inii ajaaa",
         "lead": "Belum bisa yang mewah-mewah eheheheehe, tapi ini aku pilih sambil mikirin kamu.",
         "note": (
@@ -45,7 +45,7 @@ CONFIG = {
             "tapi karena ada aku yang diam-diam pengin jagain kamu dari jauh."
         ),
         "small": (
-            "Maaf ya, aku juga lagi nabung sama ngumpulin buat kebutuhan yang lain, "
+            "Maaf ya sayangg aku jugaa lagi nabung sama ngumpulin buat kebutuhan yang lainn, "
             "jadinya ga bisa ngasii banyak:p."
         ),
     },
@@ -147,7 +147,7 @@ def cover_page():
       <section class="scrapbook spread cover-spread" aria-label="Scrapbook pembuka">
         <div class="cover-copy">
           <p class="label-strip">Untuk {escape(CONFIG["toName"])}</p>
-          <h1>Scrapbook kecil tentang kamu.</h1>
+          <h1>Scrapbook kecil tentang Hanny.</h1>
           <p class="lead">Aku susun beberapa potongan rasa, foto, dan kata-kata kecil supaya malam ini terasa dekat.</p>
         </div>
 
@@ -159,7 +159,7 @@ def cover_page():
             <span></span>
           </div>
           <div class="board-stickers" aria-hidden="true">
-            <span class="sticker sticker-date">special day</span>
+            <span class="sticker sticker-date">24 Oktober</span>
             <span class="sticker sticker-note">for you</span>
             <span class="sticker sticker-star">wish</span>
           </div>
@@ -202,7 +202,7 @@ def cover_page():
 """
     return render_page(
         "Buat Kamu",
-        "Scrapbook romantis yang dibuat khusus untuk seseorang.",
+        "Scrapbook romantis yang dibuat khusus untuk Hanny Purwita Sari.",
         "page-cover",
         body,
         "book",
@@ -239,7 +239,7 @@ def about_page():
           </figure>
           <span class="about-tape tape-a" aria-hidden="true"></span>
           <span class="about-tape tape-b" aria-hidden="true"></span>
-          <span class="about-stamp">secret date</span>
+          <span class="about-stamp">24 Oktober</span>
           <span class="about-ribbon">made with love</span>
         </div>
 
@@ -304,7 +304,7 @@ def story_page():
 """
     return render_page(
         "Buat Kamu - Cerita",
-        "Cerita kecil dalam bentuk scrapbook untuk seseorang.",
+        "Cerita kecil dalam bentuk scrapbook untuk Hanny Purwita Sari.",
         "page-story",
         body,
         "story",
@@ -409,8 +409,8 @@ def love_page():
           <div class="love-heart-card">
             <span class="love-heart" aria-hidden="true"></span>
             <p class="label-strip">last page</p>
-            <h1>Love you so much.</h1>
-            <p>Terima kasih sudah jadi rumah paling hangat buat cerita kecil ini. Kamu berarti, selalu.</p>
+            <h1>Love you so much, Hanny.</h1>
+            <p>Terima kasih sudah jadi rumah paling hangat buat cerita kecilku. Aku sayang kamu, selalu.</p>
           </div>
           <span class="love-ribbon">from me, for you</span>
           {sparkle_dust}
@@ -420,7 +420,7 @@ def love_page():
 """
     return render_page(
         "Buat Kamu - Love",
-        "Halaman terakhir berisi love kecil untuk seseorang.",
+        "Halaman terakhir berisi love kecil untuk Hanny.",
         "page-love",
         body,
         None,
