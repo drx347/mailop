@@ -7,7 +7,7 @@ import json
 
 
 ROOT = Path(__file__).resolve().parent
-ASSET_VERSION = "mobile-balanced-1"
+ASSET_VERSION = "mobile-book-zoom-1"
 BACKSOUND_FILE = "Taylor Swift - Daylight.mp3"
 
 CONFIG = {
