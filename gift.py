@@ -7,8 +7,8 @@ import json
 
 
 ROOT = Path(__file__).resolve().parent
-ASSET_VERSION = "love-photos-full-1"
-BACKSOUND_FILE = "Taylor Swift - Daylight (Official Audio) - Taylor Swift.mp3"
+ASSET_VERSION = "vercel-love-icon-1"
+BACKSOUND_FILE = "Taylor Swift - Daylight.mp3"
 
 CONFIG = {
     "toName": "Kamu",
@@ -124,6 +124,8 @@ def render_page(title, description, page_name, body, script_name=None):
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{escape(title)}</title>
     <meta name="description" content="{escape(description)}" />
+    <link rel="icon" href="{asset("icons/favicon.svg")}" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="{asset("icons/favicon.svg")}" />
     <link rel="stylesheet" href="{asset("css/scrapbook.css")}?v={ASSET_VERSION}" />
     <link rel="stylesheet" href="{asset("css/mobile.css")}?v={ASSET_VERSION}" />
   </head>

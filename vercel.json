@@ -1,0 +1,25 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    { "source": "/", "destination": "/api" },
+    { "source": "/about", "destination": "/api" },
+    { "source": "/story", "destination": "/api" },
+    { "source": "/gift", "destination": "/api" },
+    { "source": "/result", "destination": "/api" },
+    { "source": "/love", "destination": "/api" },
+    { "source": "/index.html", "destination": "/api" },
+    { "source": "/about.html", "destination": "/api" },
+    { "source": "/main.html", "destination": "/api" },
+    { "source": "/gift.html", "destination": "/api" },
+    { "source": "/result.html", "destination": "/api" },
+    { "source": "/love.html", "destination": "/api" }
+  ],
+  "headers": [
+    {
+      "source": "/ts/(.*)",
+      "headers": [
+        { "key": "Content-Type", "value": "text/javascript; charset=utf-8" }
+      ]
+    }
+  ]
+}
