@@ -7,7 +7,7 @@ import json
 
 
 ROOT = Path(__file__).resolve().parent
-ASSET_VERSION = "personal-vercel-1"
+ASSET_VERSION = "vercel-js-modules-1"
 BACKSOUND_FILE = "Taylor Swift - Daylight.mp3"
 
 CONFIG = {
@@ -113,7 +113,7 @@ def config_json():
 
 def render_page(title, description, page_name, body, script_name=None):
     page_script = (
-        f'    <script type="module" src="{asset(f"ts/{script_name}.ts")}?v={ASSET_VERSION}"></script>\n'
+        f'    <script type="module" src="{asset(f"ts/{script_name}.js")}?v={ASSET_VERSION}"></script>\n'
         if script_name
         else ""
     )
@@ -134,7 +134,7 @@ def render_page(title, description, page_name, body, script_name=None):
     <audio id="bgm" src="{asset(f"backsounds/{BACKSOUND_FILE}")}" preload="metadata"></audio>
     {body}
     <script id="birthday-config" type="application/json">{config_json()}</script>
-    <script type="module" src="{asset("ts/app.ts")}?v={ASSET_VERSION}"></script>
+    <script type="module" src="{asset("ts/app.js")}?v={ASSET_VERSION}"></script>
 {page_script.rstrip()}
   </body>
 </html>

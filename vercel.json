@@ -16,7 +16,7 @@
   ],
   "headers": [
     {
-      "source": "/ts/(.*)",
+      "source": "/ts/(.*).js",
       "headers": [
         { "key": "Content-Type", "value": "text/javascript; charset=utf-8" }
       ]
