@@ -531,6 +531,53 @@ h1 {
   pointer-events: none;
 }
 
+.scrapbook-hint {
+  position: absolute;
+  left: 50%;
+  bottom: 56px;
+  z-index: 6;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 9px 14px;
+  border: 2px solid rgba(39, 49, 61, 0.62);
+  border-radius: 999px;
+  background: #fffdf7;
+  box-shadow: 5px 5px 0 rgba(39, 49, 61, 0.12);
+  color: var(--ink);
+  font-size: 0.82rem;
+  font-weight: 800;
+  transform: translateX(-50%) rotate(-2deg);
+  animation: hintFloat 2.4s ease-in-out infinite;
+}
+
+.scrapbook-hint span {
+  display: inline-grid;
+  place-items: center;
+  min-width: 30px;
+  min-height: 22px;
+  border-radius: 999px;
+  background: #ffd5de;
+  color: var(--rose);
+  font-family: "Caveat", cursive;
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
+.scrapbook-hint::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -12px;
+  width: 14px;
+  height: 14px;
+  border-right: 2px solid rgba(39, 49, 61, 0.62);
+  border-bottom: 2px solid rgba(39, 49, 61, 0.62);
+  background: #fffdf7;
+  transform: translateX(-50%) rotate(45deg);
+}
+
 .sticker {
   position: absolute;
   min-height: 34px;
@@ -1324,6 +1371,7 @@ h1 {
 .page-cover.book-zooming .clip,
 .page-cover.book-zooming .motion-ring,
 .page-cover.book-zooming .board-stickers,
+.page-cover.book-zooming .scrapbook-hint,
 .page-cover.book-zooming .photo-stack {
   animation: zoomFadeAway 0.62s ease forwards;
   pointer-events: none;
@@ -1424,6 +1472,16 @@ h1 {
   }
   50% {
     translate: 0 -9px;
+  }
+}
+
+@keyframes hintFloat {
+  0%,
+  100% {
+    transform: translateX(-50%) rotate(-2deg);
+  }
+  50% {
+    transform: translate(-50%, -7px) rotate(1deg);
   }
 }
 

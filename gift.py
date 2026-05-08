@@ -7,7 +7,7 @@ import json
 
 
 ROOT = Path(__file__).resolve().parent
-ASSET_VERSION = "mobile-centered-book-zoom-1"
+ASSET_VERSION = "mobile-scrapbook-hint-1"
 BACKSOUND_FILE = "Taylor Swift - Daylight.mp3"
 
 CONFIG = {
@@ -163,6 +163,10 @@ def cover_page():
             <span class="sticker sticker-note">for you</span>
             <span class="sticker sticker-star">wish</span>
           </div>
+          <p class="scrapbook-hint" id="scrapbookHint">
+            <span aria-hidden="true">love</span>
+            Klik scrapbook-nya pelan-pelan
+          </p>
 
           <button class="scrap-book" id="openBook" type="button" aria-label="Buka buku scrapbook">
             <span class="book-shadow"></span>

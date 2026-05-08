@@ -72,6 +72,15 @@
     display: none;
   }
 
+  .scrapbook-hint {
+    bottom: 32px;
+    min-width: 206px;
+    justify-content: center;
+    padding: 8px 12px;
+    font-size: 0.72rem;
+    box-shadow: 4px 4px 0 rgba(39, 49, 61, 0.12);
+  }
+
   .clip {
     right: 0;
     top: 34px;
@@ -142,6 +151,7 @@
     transform: translateY(-6px) rotate(-1deg) rotateX(0deg) rotateY(0deg) scale(0.72);
   }
 
+  .page-cover:has(.scrap-book.is-open) .cover-board,
   .page-cover.book-zooming .cover-board {
     position: fixed;
     inset: 0;
@@ -154,13 +164,20 @@
     pointer-events: none;
   }
 
+  .page-cover:has(.scrap-book.is-open) .scrapbook-hint,
+  .page-cover:has(.scrap-book.is-open) .cover-board::before,
   .page-cover.book-zooming .cover-board::before {
     display: none;
   }
 
+  .page-cover:has(.scrap-book.is-open) .scrap-book,
   .page-cover.book-zooming .scrap-book {
     margin-top: 0;
     transform-origin: 50% 52%;
+  }
+
+  .page-cover:has(.scrap-book.is-open) .scrap-book.is-open {
+    transform: translateY(0) rotate(-1deg) rotateX(0deg) rotateY(0deg) scale(0.82);
   }
 
   .scrap-book.is-open .book-cover {
@@ -801,6 +818,10 @@
     transform: translateY(-6px) rotate(-1deg) rotateX(0deg) rotateY(0deg) scale(0.66);
   }
 
+  .page-cover:has(.scrap-book.is-open) .scrap-book.is-open {
+    transform: translateY(0) rotate(-1deg) rotateX(0deg) rotateY(0deg) scale(0.76);
+  }
+
   .scrap-book.is-zooming {
     animation-name: mobileBookZoomFrameSmall;
   }
@@ -851,6 +872,10 @@
 
   .scrap-book.is-open {
     transform: translateY(-6px) rotate(-1deg) rotateX(0deg) rotateY(0deg) scale(0.62);
+  }
+
+  .page-cover:has(.scrap-book.is-open) .scrap-book.is-open {
+    transform: translateY(0) rotate(-1deg) rotateX(0deg) rotateY(0deg) scale(0.7);
   }
 
   .scrap-book.is-zooming {
