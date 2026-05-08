@@ -1,7 +1,7 @@
 @media (max-width: 860px) {
   .scrap-page {
     min-height: 100svh;
-    padding: 10px;
+    padding: 8px;
     place-items: center;
   }
 
@@ -50,10 +50,10 @@
   }
 
   .cover-board {
-    min-height: 430px;
+    min-height: 390px;
     width: 100%;
     place-items: center;
-    transform: translateX(-8px);
+    transform: translateX(-4px);
   }
 
   .cover-board::before {
@@ -128,7 +128,7 @@
   .scrap-book {
     width: 330px;
     height: 252px;
-    margin-top: 108px;
+    margin-top: 58px;
     animation: none;
     transform: translateY(var(--lift)) rotate(-2deg) rotateX(var(--rx)) rotateY(var(--ry)) scale(0.66);
     transform-origin: 50% 54%;
@@ -307,14 +307,15 @@
   }
 
   .about-spread {
-    grid-template-columns: 1fr;
-    gap: 12px;
+    grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+    gap: 10px;
     min-height: auto;
-    padding: 18px 14px 22px;
+    padding: 18px 12px 20px;
+    align-items: center;
   }
 
   .about-portrait {
-    min-height: 330px;
+    min-height: 360px;
     order: 1;
   }
 
@@ -323,7 +324,7 @@
   }
 
   .about-main-photo {
-    width: min(208px, 62vw);
+    width: min(210px, 42vw);
     padding: 8px 8px 26px;
   }
 
@@ -334,18 +335,18 @@
   }
 
   .about-mini-photo {
-    width: 86px;
+    width: min(88px, 18vw);
     padding: 5px 5px 15px;
   }
 
   .about-mini-photo.mini-a {
-    right: 8px;
-    top: 42px;
+    right: -2px;
+    top: 46px;
   }
 
   .about-mini-photo.mini-b {
-    left: 6px;
-    bottom: 48px;
+    left: -2px;
+    bottom: 54px;
   }
 
   .about-paper-shape.shape-a {
@@ -399,24 +400,24 @@
   }
 
   .about-note h1 {
-    max-width: 11ch;
-    font-size: clamp(1.85rem, 10vw, 2.8rem);
+    max-width: 10ch;
+    font-size: clamp(1.8rem, 7.6vw, 3rem);
   }
 
   .about-subtitle {
     margin-top: 12px;
-    font-size: 0.9rem;
+    font-size: clamp(0.78rem, 2.4vw, 0.92rem);
     line-height: 1.55;
   }
 
   .about-facts {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 9px;
-    margin-top: 18px;
+    margin-top: 14px;
   }
 
   .about-fact {
-    padding: 11px 12px;
+    padding: 9px 10px;
   }
 
   .about-fact span {
@@ -425,22 +426,22 @@
 
   .about-fact strong {
     margin-top: 5px;
-    font-size: 0.88rem;
+    font-size: clamp(0.72rem, 2.2vw, 0.86rem);
   }
 
   .about-story {
-    margin-top: 16px;
-    padding: 14px;
+    margin-top: 14px;
+    padding: 12px;
     border-left-width: 5px;
     transform: none;
   }
 
   .about-story h2 {
-    font-size: 1.32rem;
+    font-size: clamp(1.08rem, 4vw, 1.36rem);
   }
 
   .about-story p {
-    font-size: 0.88rem;
+    font-size: clamp(0.76rem, 2.3vw, 0.88rem);
     line-height: 1.58;
   }
 
@@ -449,8 +450,8 @@
   }
 
   .gift-spread {
-    gap: 18px;
-    padding: 22px 14px;
+    gap: 12px;
+    padding: 20px 12px;
     align-content: center;
   }
 
@@ -465,13 +466,13 @@
   }
 
   .gift-box-wrap {
-    min-height: 292px;
+    min-height: 250px;
     gap: 10px;
   }
 
   .present-box {
-    width: min(300px, 82vw);
-    height: 244px;
+    width: min(286px, 72vw);
+    height: 226px;
   }
 
   .present-body {
@@ -536,13 +537,13 @@
 
   .sorry-spread {
     min-height: auto;
-    padding: 22px 14px;
+    padding: 20px 12px;
   }
 
   .sorry-card {
     width: 100%;
-    grid-template-columns: 1fr;
-    gap: 14px;
+    grid-template-columns: minmax(0, 1fr) minmax(118px, 0.6fr);
+    gap: 12px;
   }
 
   .sorry-card .label-strip,
@@ -550,13 +551,18 @@
   .sorry-card .sorry-lead,
   .sorry-card .final-message,
   .sorry-card .sorry-small,
-  .sorry-sweater {
+  .result-actions {
     grid-column: 1;
   }
 
+  .sorry-sweater {
+    grid-column: 2;
+    grid-row: 1 / span 5;
+  }
+
   .sorry-card h1 {
-    max-width: 11ch;
-    font-size: clamp(2rem, 11vw, 3.25rem);
+    max-width: 10ch;
+    font-size: clamp(1.8rem, 7.8vw, 3.25rem);
   }
 
   .sorry-lead {
@@ -566,9 +572,8 @@
   }
 
   .sorry-sweater {
-    grid-row: auto;
     justify-self: center;
-    width: min(178px, 54vw);
+    width: min(156px, 31vw);
     padding: 8px 8px 26px;
     transform: rotate(2deg);
   }
@@ -593,17 +598,17 @@
 
   .love-spread {
     min-height: auto;
-    padding: 20px 12px 24px;
+    padding: 14px 8px 18px;
   }
 
   .love-stage {
-    min-height: 690px;
+    min-height: min(660px, calc(100svh - 52px));
   }
 
   .love-heart-card {
-    width: min(300px, 76vw);
-    min-height: 540px;
-    padding: 34px 22px 48px;
+    width: min(340px, 72vw);
+    min-height: min(540px, calc(100svh - 118px));
+    padding: 30px 20px 44px;
   }
 
   .love-heart {
@@ -636,7 +641,7 @@
   }
 
   .love-photo {
-    width: 62px;
+    width: clamp(54px, 15vw, 70px);
     padding: 5px 5px 15px;
   }
 
@@ -696,20 +701,20 @@
   }
 
   .cover-board {
-    min-height: 400px;
-    transform: translateX(-28px);
+    min-height: 360px;
+    transform: translateX(-14px);
   }
 
   .scrap-book {
-    transform: translateY(var(--lift)) rotate(-2deg) rotateX(var(--rx)) rotateY(var(--ry)) scale(0.52);
+    transform: translateY(var(--lift)) rotate(-2deg) rotateX(var(--rx)) rotateY(var(--ry)) scale(0.62);
   }
 
   .scrap-book:hover {
-    transform: translateY(var(--lift)) rotate(-2deg) rotateX(var(--rx)) rotateY(var(--ry)) scale(0.52);
+    transform: translateY(var(--lift)) rotate(-2deg) rotateX(var(--rx)) rotateY(var(--ry)) scale(0.62);
   }
 
   .scrap-book.is-open {
-    transform: translateY(-6px) rotate(-1deg) rotateX(0deg) rotateY(0deg) scale(0.58);
+    transform: translateY(-6px) rotate(-1deg) rotateX(0deg) rotateY(0deg) scale(0.66);
   }
 
   .scrap-book.is-zooming {
@@ -748,19 +753,20 @@
   }
 
   .cover-board {
-    transform: translateX(-32px);
+    min-height: 340px;
+    transform: translateX(-18px);
   }
 
   .scrap-book {
-    transform: translateY(var(--lift)) rotate(-2deg) rotateX(var(--rx)) rotateY(var(--ry)) scale(0.48);
+    transform: translateY(var(--lift)) rotate(-2deg) rotateX(var(--rx)) rotateY(var(--ry)) scale(0.56);
   }
 
   .scrap-book:hover {
-    transform: translateY(var(--lift)) rotate(-2deg) rotateX(var(--rx)) rotateY(var(--ry)) scale(0.48);
+    transform: translateY(var(--lift)) rotate(-2deg) rotateX(var(--rx)) rotateY(var(--ry)) scale(0.56);
   }
 
   .scrap-book.is-open {
-    transform: translateY(-6px) rotate(-1deg) rotateX(0deg) rotateY(0deg) scale(0.54);
+    transform: translateY(-6px) rotate(-1deg) rotateX(0deg) rotateY(0deg) scale(0.62);
   }
 
   .scrap-book.is-zooming {
@@ -791,18 +797,18 @@
 
 @keyframes mobileBookZoomFrameSmall {
   from {
-    transform: translateY(-6px) rotate(-1deg) scale(0.58);
+    transform: translateY(-6px) rotate(-1deg) scale(0.66);
   }
   to {
-    transform: translate(-20vw, -3vh) rotate(0deg) scale(0.82);
+    transform: translate(-16vw, -3vh) rotate(0deg) scale(0.9);
   }
 }
 
 @keyframes mobileBookZoomFrameTiny {
   from {
-    transform: translateY(-6px) rotate(-1deg) scale(0.54);
+    transform: translateY(-6px) rotate(-1deg) scale(0.62);
   }
   to {
-    transform: translate(-18vw, -3vh) rotate(0deg) scale(0.76);
+    transform: translate(-14vw, -3vh) rotate(0deg) scale(0.84);
   }
 }

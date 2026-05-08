@@ -3130,9 +3130,9 @@ h1 {
 
   .spread,
   .result-spread {
-    grid-template-columns: 1fr;
-    gap: 28px;
-    padding: 26px 18px;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    gap: 18px;
+    padding: 22px 16px;
   }
 
   .single-page {
@@ -3212,7 +3212,21 @@ h1 {
 
   .collage-grid,
   .gift-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-spread {
+    grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+    gap: 14px;
+  }
+
+  .story-page .spread {
+    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  }
+
+  .gift-spread,
+  .sorry-spread {
+    padding: 22px 16px;
   }
 
   .note-card {
@@ -3256,15 +3270,31 @@ h1 {
 
   .actions,
   .gift-actions {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .btn {
-    width: 100%;
+    width: auto;
+    min-width: min(160px, 100%);
   }
 
   .cover-copy .btn {
     width: min(100%, 320px);
+  }
+
+  .spread,
+  .result-spread,
+  .about-spread,
+  .story-page .spread {
+    grid-template-columns: minmax(0, 0.86fr) minmax(0, 1.14fr);
+    gap: 10px;
+    padding: 18px 10px;
+  }
+
+  .gift-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
   }
 
   .env-paper {

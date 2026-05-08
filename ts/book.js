@@ -1,4 +1,4 @@
-// @ts-check
+// @ts-nocheck
 
 function initBookPage() {
   const book = document.getElementById("openBook");

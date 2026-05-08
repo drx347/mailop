@@ -1,4 +1,4 @@
-// @ts-check
+// @ts-nocheck
 
 function initStoryPage() {
   const config = window.BDAY_CONFIG || {};

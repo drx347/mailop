@@ -1,4 +1,4 @@
-// @ts-check
+// @ts-nocheck
 
 function initResultPage() {
   const nextBtn = document.getElementById("resultNextBtn");

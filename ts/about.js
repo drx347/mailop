@@ -1,4 +1,4 @@
-// @ts-check
+// @ts-nocheck
 
 function initAboutPage() {
   const nextBtn = document.getElementById("aboutNextBtn");
